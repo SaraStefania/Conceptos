@@ -5,16 +5,23 @@
     font-family: 'Inter', 'Source Sans 3', sans-serif;
 }
 .container-span{
-    padding: 1vh 4vh;
+    padding: 2vh 4vh;
+    margin:0  1vh;
     display: inline-block; 
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
-.palabra{
+.palabra, .correct-answer{
     padding: 1vh;
+    margin: 5px 10px;
     background-color: aqua;
    border-radius: 2vh;
+   list-style: none;
 }
 
 .container-t{
    margin: 0 50vh;
+}
+.correct-answer{
+    background-color: rgb(31, 212, 100);
+  
 }

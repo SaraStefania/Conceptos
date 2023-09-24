@@ -27,7 +27,8 @@ for (let i = 0; i < span.length; i++) {
     const source = document.getElementById(data);
     e.target.appendChild(source);
     wordsPlaced++;
-
+    span[i].style.borderBottom = 'none'; 
+    span[i].style.padding = '0';
     if (wordsPlaced === span.length) {
         attempts++;
         wordsPlaced = 0; 
@@ -47,7 +48,13 @@ comprobarBtn.addEventListener('click', () => {
 
       if (slurredWord === rightWord) {
         correctCount++;
+         spanChildren[0].classList.add('correct-answer');
+   
+
       } else {
+        span[i].style.borderBottom = '1px solid black'; 
+        span[i].style.padding = '1vh 4vh';
+
         originalContainer.appendChild(spanChildren[0]);
       }
     }
@@ -57,6 +64,7 @@ comprobarBtn.addEventListener('click', () => {
     correctAlert()
     comprobarBtn.disabled = true;
   } else if (attempts >= maxAttempts) {
+    incorrectAlert()
     comprobarBtn.disabled = true;
   }
 });
@@ -67,6 +75,14 @@ const correctAlert = () => {
       ¡Felicitaciones! Haz logrado organizar
       correctamente cada uno de los términos y así recordar la definición de la
       arquitectura multiprocesador. Sigue estudiando para ser cada vez mejor.
+      </div>
+    `;
+    document.getElementById('alertContainer').innerHTML = alert;
+  }
+  const incorrectAlert = () => {
+    const alert = `
+      <div class="alert alert-danger" role="alert">
+      Estudia una vez más la arquitectura procesador e inténtalo de nuevo.
       </div>
     `;
     document.getElementById('alertContainer').innerHTML = alert;
