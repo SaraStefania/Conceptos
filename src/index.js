@@ -54,8 +54,20 @@ comprobarBtn.addEventListener('click', () => {
   }
 
   if (correctCount === span.length) {
-    alert('¡Todas las palabras son correctas!');
+    correctAlert()
+    comprobarBtn.disabled = true;
   } else if (attempts >= maxAttempts) {
     comprobarBtn.disabled = true;
   }
 });
+
+const correctAlert = () => {
+    const alert = `
+      <div class="alert alert-info" role="alert">
+      ¡Felicitaciones! Haz logrado organizar
+      correctamente cada uno de los términos y así recordar la definición de la
+      arquitectura multiprocesador. Sigue estudiando para ser cada vez mejor.
+      </div>
+    `;
+    document.getElementById('alertContainer').innerHTML = alert;
+  }
