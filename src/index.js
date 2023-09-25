@@ -60,12 +60,15 @@ comprobarBtn.addEventListener('click', () => {
   }
 
   if (correctCount === span.length) {
-    correctAlert()
+    correctAlert();
     comprobarBtn.disabled = true;
   } else if (attempts >= maxAttempts) {
-    incorrectAlert()
+    incorrectAlert();
     comprobarBtn.disabled = true;
+  } else {
+    attempts++;
   }
+  
 });
 
 const correctAlert = () => {
