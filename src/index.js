@@ -54,7 +54,6 @@ comprobarBtn.addEventListener('click', () => {
       } else {
         span[i].style.borderBottom = '1px solid black'; 
         span[i].style.padding = '1vh 4vh';
-
         originalContainer.appendChild(spanChildren[0]);
       }
     }
@@ -71,7 +70,7 @@ comprobarBtn.addEventListener('click', () => {
 
 const correctAlert = () => {
     const alert = `
-      <div class="alert alert-info" role="alert">
+      <div class="alert alert-success" role="alert">
       ¡Felicitaciones! Haz logrado organizar
       correctamente cada uno de los términos y así recordar la definición de la
       arquitectura multiprocesador. Sigue estudiando para ser cada vez mejor.

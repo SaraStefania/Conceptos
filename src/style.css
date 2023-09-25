@@ -4,24 +4,61 @@
     padding: 0;
     font-family: 'Inter', 'Source Sans 3', sans-serif;
 }
+body{
+    background-color: rgb(103, 179, 288);
+}
+.container-list{
+    background-color: rgb(13, 60, 107);
+    padding: 10vh 10vh;
+    margin: 0 100vh 0 0;
+}
+li, h1, h2, #comprobarBtn{
+    color: rgb(13, 60, 107);
+    font-weight: 700;
+}
+#titleWord{
+    color: white;
+}
+h1{
+    margin-top: 15vh;
+}
+.container-parrafo{
+    background-color: white;
+   width: 100vh;
+   padding: 0 5vh 0 25vh;
+   height: 70vh;
+   color: rgba(0, 0, 0, 0.219);
+}
+#parrafo{
+    color: rgba(0, 0, 0, 0.538);
+}
+.container-t{
+    margin-top: 15vh;
+}
+h2{
+    font-size: 25px;
+}
 .container-span{
     padding: 2vh 4vh;
     margin:0  1vh;
     display: inline-block; 
-    border-bottom: 1px solid black;
+    border-bottom:  1px solid rgba(0, 0, 0, 0.538);
 }
 .palabra, .correct-answer{
+    border-radius: 2vh;
     padding: 1vh;
     margin: 5px 10px;
-    background-color: aqua;
-   border-radius: 2vh;
+    background-color:white ;
    list-style: none;
 }
 
-.container-t{
-   margin: 0 50vh;
-}
 .correct-answer{
-    background-color: rgb(31, 212, 100);
-  
+    background-color: #abee93;
+}
+#comprobarBtn{
+    background-color: rgb(120, 187, 230);
+    padding: 0.5vh 1vh;
+    border: 1px solid rgb(13, 60, 107);
+    border-radius: 1vh;
+    margin-top: 2vh;
 }
